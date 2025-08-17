@@ -20,15 +20,15 @@ const CategorySection = () => {
     }
   });
 
-  // --- লোডিং এবং ত্রুটি স্থিতি হ্যান্ডলিং ---
+ 
   if (isLoading) {
-    return <p className="text-center py-8">ক্যাটাগরি লোড হচ্ছে...</p>;
+    return <p className="text-center py-8">Category is Loading...</p>;
   }
 
   if (isError) {
     return (
       <p className="text-center py-8 text-red-600">
-        ক্যাটাগরি লোড করতে ব্যর্থ হয়েছে: {error.message || 'অজানা ত্রুটি'}
+        Failed loadingcategory: {error.message || 'unknown error'}
       </p>
     );
   }

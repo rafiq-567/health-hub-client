@@ -143,6 +143,11 @@ const ManageCategory = () => {
                 className="w-full input input-bordered"
                 placeholder="Image URL"
               />
+              <input
+                {...register("description", { required: true })}
+                className="w-full input input-bordered"
+                placeholder="Description"
+              />
               <div className="flex justify-end gap-2">
                 <button type="button" onClick={() => setShowModal(false)} className="btn btn-ghost">
                   Cancel
