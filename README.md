@@ -83,7 +83,7 @@ To run this project locally, follow these steps:
     VITE_FIREBASE_APP_ID=YOUR_FIREBASE_APP_ID
     VITE_image_upload_key=YOUR_IMGBB_API_KEY
     VITE_STRIPE_PUBLISHABLE_KEY=YOUR_STRIPE_PUBLISHABLE_KEY
-    VITE_API_URL=https://server-mauve-seven.vercel.app
+    VITE_API_URL=https://server-two-rosy-34.vercel.app
     ```
 
 4.  **Install dependencies (Server-Side):**

@@ -8,7 +8,7 @@ const Slider = () => {
   const { data: slides = [], isLoading } = useQuery({
     queryKey: ['slider'],
     queryFn: async () => {
-      const res = await fetch('https://server-mauve-seven.vercel.app/slider');
+      const res = await fetch('https://server-two-rosy-34.vercel.app/slider');
       return res.json();
     }
   });

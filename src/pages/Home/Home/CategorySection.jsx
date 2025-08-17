@@ -10,7 +10,7 @@ const CategorySection = () => {
   } = useQuery({
     queryKey: ['categories'],
     queryFn: async () => {
-      const res = await fetch('https://server-mauve-seven.vercel.app/categories');
+      const res = await fetch('https://server-two-rosy-34.vercel.app/categories');
       // HTTP স্ট্যাটাস কোড 2xx না হলে ত্রুটি ধরুন
       if (!res.ok) {
         const errorData = await res.json(); // ব্যাকএন্ড থেকে আসা ত্রুটি বার্তা
@@ -42,7 +42,7 @@ const CategorySection = () => {
   // --- সফলভাবে ডেটা লোড হলে কম্পোনেন্ট রেন্ডার করা ---
   return (
     <div className="p-6 bg-gray-50 min-h-screen">
-      <h2 className="text-2xl font-bold mb-4 text-center">Browse By Category</h2>
+      <h2 className="text-2xl font-bold mb-4 text-center dark:text-black">Browse By Category</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-6">
         {categories.slice(0, 6).map(category => (
           <CategoryCard key={category._id} category={category} />

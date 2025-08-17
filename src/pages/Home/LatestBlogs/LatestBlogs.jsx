@@ -4,19 +4,19 @@ const LatestBlogs = () => {
       id: 1,
       title: "5 Tips for Boosting Immunity",
       desc: "Simple lifestyle changes that can strengthen your immune system.",
-      image: "https://i.ibb.co/MpJNYQy/immunity.jpg",
+      image: "https://i.ibb.co.com/TDRFF8w6/5-Tips-for-Boosting-Immunity.png",
     },
     {
       id: 2,
       title: "Managing Diabetes with Diet",
       desc: "Learn how to control blood sugar naturally with food choices.",
-      image: "https://i.ibb.co/Fq9g4vJ/diabetes.jpg",
+      image: "https://i.ibb.co.com/60QxvgpF/Managing-Diabetes-with-Diet.jpg",
     },
     {
       id: 3,
       title: "Why Regular Health Checkups Matter",
       desc: "Early detection is the key to a healthier life.",
-      image: "https://i.ibb.co/7SfrHss/checkup.jpg",
+      image: "https://i.ibb.co.com/Swj3shHt/Why-Regular-Health-Checkups-Matter.png",
     },
   ];
 

@@ -19,7 +19,7 @@ const CheckoutForm = ({ total }) => {
   // clientSecret ফেচ করার জন্য useEffect ব্যবহার করুন
   useEffect(() => {
     if (total > 0) { // মোট মূল্য 0 এর বেশি হলেই পেমেন্ট ইনটেন্ট তৈরি করার অনুরোধ পাঠান
-      fetch('https://server-mauve-seven.vercel.app/create-payment-intent', {
+      fetch('https://server-two-rosy-34.vercel.app/create-payment-intent', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ const CheckoutForm = ({ total }) => {
     //   clearCart(); // Clear cart after successful payment
 
     //   // Save payment info to DB (optional)
-    //   await fetch('https://server-mauve-seven.vercel.app/payments', {
+    //   await fetch('https://server-two-rosy-34.vercel.app/payments', {
     //     method: 'POST',
     //     headers: { 'Content-Type': 'application/json' },
     //     body: JSON.stringify({
@@ -136,7 +136,7 @@ const CheckoutForm = ({ total }) => {
       clearCart(); // সফল পেমেন্টের পর কার্ট পরিষ্কার করুন
 
       // পেমেন্টের তথ্য ডেটাবেসে সংরক্ষণ করুন
-      await fetch('https://server-mauve-seven.vercel.app/payments', {
+      await fetch('https://server-two-rosy-34.vercel.app/payments', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

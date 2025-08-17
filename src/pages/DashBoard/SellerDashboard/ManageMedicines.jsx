@@ -17,7 +17,7 @@ const ManageMedicines = () => {
     queryKey: ['medicines', sellerEmail],
     enabled: !!sellerEmail, // ✅ Prevent query if email is not ready
     queryFn: async () => {
-      const res = await fetch(`https://server-mauve-seven.vercel.app/my-medicines?email=${sellerEmail}`);
+      const res = await fetch(`https://server-two-rosy-34.vercel.app/my-medicines?email=${sellerEmail}`);
       return res.json();
     },
   });
@@ -25,8 +25,8 @@ const ManageMedicines = () => {
   if (isLoading) return <p>Loading...</p>;
 
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-bold mb-4">My Medicines</h2>
+    <div className="p-4 dark:text-black">
+      <h2 className="text-xl font-bold mb-4 dark:text-black">My Medicines</h2>
       <button
         onClick={() => setIsModalOpen(true)}
         className="px-4 py-2 bg-blue-600 text-white rounded mb-4"

@@ -18,7 +18,7 @@ const CategoryDetailsPage = () => {
   const { data: medicines = [], isLoading } = useQuery({
     queryKey: ['category-medicines', title],
     queryFn: async () => {
-      const res = await fetch(`https://server-mauve-seven.vercel.app/healthHub?category=${title}`);
+      const res = await fetch(`https://server-two-rosy-34.vercel.app/healthHub?category=${title}`);
     //   return res.json();
 
     if (!res.ok) throw new Error('Failed to fetch medicines');

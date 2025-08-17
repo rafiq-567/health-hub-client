@@ -21,11 +21,11 @@ const AdminHome = () => {
     <div>
       <h2 className="text-2xl font-bold mb-4">Admin Dashboard</h2>
       <div className="grid grid-cols-2 gap-6">
-        <div className="p-4 bg-white shadow rounded">
+        <div className="p-4 bg-white dark:text-black shadow rounded">
           <h3 className="text-lg font-semibold">Total Paid Sales</h3>
           <p className="text-xl text-green-600 font-bold">${stats.paid}</p>
         </div>
-        <div className="p-4 bg-white shadow rounded">
+        <div className="p-4 bg-white dark:text-black shadow rounded">
           <h3 className="text-lg font-semibold">Pending Sales</h3>
           <p className="text-xl text-yellow-600 font-bold">${stats.pending}</p>
         </div>

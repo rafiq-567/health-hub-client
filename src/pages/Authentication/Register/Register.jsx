@@ -24,13 +24,13 @@ const Register = () => {
       return res.data?.data?.url || '';
     } catch (err) {
       console.error('Image upload failed:', err);
-      toast.error('Image upload failed!'); // Already there, good!
+      toast.error('Image upload failed!');
       return '';
     }
   };
 
   const onSubmit = async (data) => {
-    const { name, email, password, role } = data;
+    const { name, email, password, role, number, address } = data;
     const imageFile = data.image[0];
 
     try {
@@ -52,7 +52,9 @@ const Register = () => {
       // 4. Save user to DB
       const userData = {
         name,
+        address,
         email,
+        number,
         photoURL,
         role,
         created_at: new Date().toISOString()
@@ -93,6 +95,17 @@ const Register = () => {
             />
             {errors.name && <p className='text-red-500'>Name is required</p>}
 
+            {/* adress */}
+            <label className="label">Your Address</label>
+            <input
+              type="text"
+              {...register('address', { required: true })}
+              className="input"
+              placeholder="Your Address"
+            />
+            {errors.address && <p className='text-red-500'>Address is required</p>}
+
+
             {/* Image */}
             <label className="label">Photo</label>
             <input
@@ -110,6 +123,15 @@ const Register = () => {
               {...register('email', { required: true })}
               className="input"
               placeholder="Email"
+            />
+            {errors.email && <p className='text-red-500'>Email is required</p>}
+            {/* Phone Number */}
+            <label className="label">Phone Number</label>
+            <input
+              type="number"
+              {...register('number', { required: true, minLength: 10 })}
+              className="input"
+              placeholder="Phone Number"
             />
             {errors.email && <p className='text-red-500'>Email is required</p>}
 
@@ -144,7 +166,7 @@ const Register = () => {
             <small>Already have an account? <Link className='btn btn-link' to='/login'>Login</Link></small>
           </p>
         </form>
-        
+
       </div>
     </div>
   );

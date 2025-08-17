@@ -11,7 +11,8 @@ const AddMedicineModal = ({ sellerEmail, closeModal, refetch }) => {
     massUnit: 'Mg',
     price: '',
     discount: 0,
-    sellerEmail, 
+    sellerEmail,
+    bestSeller: true,
   });
 
   const handleChange = e => {
@@ -23,7 +24,7 @@ const AddMedicineModal = ({ sellerEmail, closeModal, refetch }) => {
     e.preventDefault();
     const newMedicine = { ...form, sellerEmail, price: parseFloat(form.price), discount: parseFloat(form.discount || 0) };
 
-    const res = await fetch('https://server-mauve-seven.vercel.app/healthHub', {
+    const res = await fetch('https://server-two-rosy-34.vercel.app/healthHub', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newMedicine)
@@ -54,6 +55,11 @@ const AddMedicineModal = ({ sellerEmail, closeModal, refetch }) => {
 
         <input type="number" name="price" placeholder="Per Unit Price" required onChange={handleChange} className="input input-bordered w-full" />
         <input type="number" name="discount" placeholder="Discount (%)" defaultValue={0} onChange={handleChange} className="input input-bordered w-full" />
+
+        <select name="bestSeller" onChange={handleChange} className="select select-bordered w-full">
+          <option value="Mg">true</option>
+          <option value="ML">false</option>
+        </select>
 
         <div className="flex justify-end gap-2">
           <button type="button" onClick={closeModal} className="btn btn-ghost">Cancel</button>

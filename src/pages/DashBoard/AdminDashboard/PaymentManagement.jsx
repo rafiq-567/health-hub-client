@@ -9,7 +9,7 @@ const PaymentManagement = () => {
     const { data: payments = [], isLoading } = useQuery({
         queryKey: ['payments'],
         queryFn: async () => {
-            const res = await axios.get('https://server-mauve-seven.vercel.app/payments')
+            const res = await axios.get('https://server-two-rosy-34.vercel.app/payments')
             return res.data
         },
     })
@@ -17,7 +17,7 @@ const PaymentManagement = () => {
     // Mutation to update payment status
     const mutation = useMutation({
         mutationFn: async (id) => {
-            const res = await axios.patch(`https://server-mauve-seven.vercel.app/payments/${id}`, {
+            const res = await axios.patch(`https://server-two-rosy-34.vercel.app/payments/${id}`, {
                 status: 'paid',
             })
             return res.data
@@ -36,11 +36,11 @@ const PaymentManagement = () => {
 
     return (
         <div className="p-6">
-            <h2 className="text-2xl font-bold mb-4">Payment Management</h2>
+            <h2 className="text-2xl font-bold mb-4 dark:text-black">Payment Management</h2>
             <div className="overflow-x-auto">
                 <table className="min-w-full bg-white border border-gray-200 shadow-sm">
-                    <thead className="bg-gray-200">
-                        <tr>
+                    <thead className="bg-gray-200 dark:text-black">
+                        <tr className='dark:text-black'>
                             <th className="p-2 border">#</th>
                             <th className="p-2 border">User Email</th>
                             <th className="p-2 border">Amount</th>
@@ -48,7 +48,7 @@ const PaymentManagement = () => {
                             <th className="p-2 border">Action</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='dark:text-black'>
                         {payments.map((payment, idx) => (
                             <tr key={payment._id}>
                                 <td className="p-2 border text-center">{idx + 1}</td>

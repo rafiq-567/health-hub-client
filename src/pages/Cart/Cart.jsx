@@ -36,7 +36,7 @@ const Cart = () => {
         <>
           <table className="w-full table-auto border">
             <thead>
-              <tr className="bg-gray-100 text-left">
+              <tr className="bg-gray-100 dark:text-black text-left">
                 <th className="p-2">Image</th>
                 <th className="p-2">Medicine</th>
                 <th className="p-2">Company</th>
@@ -89,7 +89,7 @@ const Cart = () => {
           <div className="flex justify-between items-center mt-6">
             <button
               onClick={clearCart}
-              className="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400"
+              className="bg-gray-300 dark:bg-blue-500 px-4 py-2 rounded hover:bg-gray-400 dark:text-white"
             >
               Clear Cart
             </button>
@@ -101,8 +101,8 @@ const Cart = () => {
                 onClick={() => navigate('/checkout')}
                 className={
                   (!user || isOwnProductInCart)
-                    ? 'bg-gray-400 text-white px-5 py-2 rounded cursor-not-allowed'
-                    : 'bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700'
+                    ? 'bg-gray-400 text-white dark:bg-blue-500 px-5 py-2 rounded cursor-not-allowed'
+                    : 'bg-blue-600 text-white dark:bg-blue-500 px-5 py-2 rounded hover:bg-blue-700'
                 }
               >
                 {!user

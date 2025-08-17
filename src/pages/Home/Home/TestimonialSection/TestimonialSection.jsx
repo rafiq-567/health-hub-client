@@ -20,7 +20,7 @@ const TestimonialSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {testimonials.map((t, i) => (
           <div key={i} className="p-4 border rounded shadow">
-            <p className="text-gray-700 italic">"{t.review}"</p>
+            <p className="text-gray-700 italic dark:text-white">"{t.review}"</p>
             <p className="font-semibold mt-3">— {t.name}</p>
             <p className="text-yellow-500">{"⭐".repeat(t.rating)}</p>
           </div>

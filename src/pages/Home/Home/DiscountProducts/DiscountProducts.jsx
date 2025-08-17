@@ -9,7 +9,7 @@ const DiscountProducts = () => {
   const { data: products = [], isLoading } = useQuery({
     queryKey: ['discounted-medicines'],
     queryFn: async () => {
-      const res = await fetch('https://server-mauve-seven.vercel.app/medicines/discount');
+      const res = await fetch('https://server-two-rosy-34.vercel.app/medicines/discount');
       return res.json();
     }
   });
@@ -42,7 +42,7 @@ console.log(products);
               />
 
               <div className="mt-4">
-                <h3 className="text-lg font-semibold">{product.title}</h3>
+                <h3 className="text-lg font-semibold dark:text-black">{product.title}</h3>
                 <p className="text-sm text-gray-600">{product.genericName}</p>
                 <p className="mt-2 text-green-700 font-semibold">
                   ${product.price?.toFixed(2)}{' '}

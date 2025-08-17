@@ -33,7 +33,7 @@ const UserPaymentHistory = () => { // <--- userEmail prop has been removed
         queryKey: ['userPayments', userEmail], // userEmail will be defined if we reach here
         enabled: !!userEmail, // Still good practice, but now mostly redundant if we've passed the !userEmail check above
         queryFn: async () => {
-            const url = `https://server-mauve-seven.vercel.app/payments/user?email=${userEmail}`;
+            const url = `https://server-two-rosy-34.vercel.app/payments/user?email=${userEmail}`;
             console.log("UserPaymentHistory Debug: Attempting to fetch from URL:", url);
 
             try {
@@ -67,7 +67,7 @@ const UserPaymentHistory = () => { // <--- userEmail prop has been removed
     console.log("UserPaymentHistory Debug: Final payments data length:", payments.length);
 
     return (
-        <div className="p-4">
+        <div className="p-4 dark:text-black">
             <h2 className="text-xl font-bold mb-4">My Payment History</h2>
             {payments.length === 0 ? (
                 <p>No payment history available.</p>
@@ -83,9 +83,9 @@ const UserPaymentHistory = () => { // <--- userEmail prop has been removed
                             <th>Date</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className=''>
                         {payments.map((payment, idx) => (
-                            <tr key={payment._id} className="border-t">
+                            <tr key={payment._id} className="border-t ">
                                 <td>{idx + 1}</td>
                                 <td>{payment.transactionId || 'N/A'}</td>
                                 <td>

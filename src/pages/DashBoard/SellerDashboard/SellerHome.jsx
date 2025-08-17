@@ -26,16 +26,16 @@ const SellerHome = () => {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-4">Seller Dashboard</h2>
+      <h2 className="text-2xl font-bold mb-4 dark:text-black">Seller Dashboard</h2>
       {isLoading ? (
         <p>Loading payment data...</p>
       ) : (
         <div className="grid grid-cols-2 gap-6">
-          <div className="p-4 bg-white shadow rounded">
+          <div className="p-4 bg-white shadow rounded dark:text-black">
             <h3 className="text-lg font-semibold">Paid Sales</h3>
             <p className="text-xl text-green-600 font-bold">${paidTotal.toFixed(2)}</p>
           </div>
-          <div className="p-4 bg-white shadow rounded">
+          <div className="p-4 bg-white shadow rounded dark:text-black">
             <h3 className="text-lg font-semibold">Pending Sales</h3>
             <p className="text-xl text-yellow-600 font-bold">${pendingTotal.toFixed(2)}</p>
           </div>

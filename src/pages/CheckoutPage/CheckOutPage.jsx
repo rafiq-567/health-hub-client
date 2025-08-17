@@ -15,7 +15,7 @@ const CheckoutPage = () => {
 
   useEffect(() => {
     if (totalAmount > 0) {
-      fetch('https://server-mauve-seven.vercel.app/create-payment-intent', {
+      fetch('https://server-two-rosy-34.vercel.app/create-payment-intent', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount: totalAmount }),

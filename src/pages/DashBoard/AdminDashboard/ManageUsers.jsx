@@ -49,11 +49,11 @@ const ManageUsers = () => {
 
     return (
         <div className="p-6">
-            <h2 className="text-2xl font-semibold mb-4">Manage Users</h2>
+            <h2 className="text-2xl font-semibold mb-4 dark:text-black">Manage Users</h2>
             <div className="overflow-x-auto">
-                <table className="table w-full">
+                <table className="table w-full dark:text-black">
                     <thead>
-                        <tr>
+                        <tr className="dark:text-black">
                             <th>#</th>
                             <th>Name</th>
                             <th>Email</th>
@@ -96,7 +96,7 @@ const ManageUsers = () => {
                                             </button>
                                         )}
                                         {isSelf && (
-                                            <span className="text-sm text-gray-400">
+                                            <span className="text-sm text-gray-400 dark:text-black">
                                                 You cannot change your own role
                                             </span>
                                         )}

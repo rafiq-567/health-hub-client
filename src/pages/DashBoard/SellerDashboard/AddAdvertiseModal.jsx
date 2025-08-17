@@ -28,7 +28,7 @@ const AddAdvertiseModal = ({ sellerEmail, closeModal, refetch }) => {
 
     console.log('পাঠানো ডাটা:', newAd);
 
-    const res = await fetch('https://server-mauve-seven.vercel.app/advertised-medicines', {
+    const res = await fetch('https://server-two-rosy-34.vercel.app/advertised-medicines', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newAd)

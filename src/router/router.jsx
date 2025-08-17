@@ -24,6 +24,8 @@ import CategoryDetailsPage from "../pages/CategoryDetailsPage/CategoryDetailsPag
 import Profile from "../pages/DashBoard/Profile";
 import PrivateRoute from "../routes/PrivateRoute";
 import AboutUs from "../pages/AboutUs/AboutUs";
+import BestSellers from "../pages/Home/BestSellers/BestSellers";
+import SellerAdvertiseWrapper from "../pages/DashBoard/SellerAdvertiseWrapper";
 
 
 
@@ -47,7 +49,11 @@ export const router = createBrowserRouter([
             {
                 path: '/about',
                 Component: AboutUs
-            }
+            },
+            {
+                path: '/best-sellers',
+                Component: BestSellers
+            },
         ]
     },
     {
@@ -168,11 +174,20 @@ export const router = createBrowserRouter([
                     </PrivateRoute>
                 )
             },
-            {
+            // {
+            //     path: 'advertise-request',
+            //     element: (
+            //         <PrivateRoute>
+            //             <AdvertiseRequest />
+            //         </PrivateRoute>
+            //     )
+            // },
+             {
                 path: 'advertise-request',
                 element: (
                     <PrivateRoute>
-                        <AdvertiseRequest />
+                        {/* Use the new wrapper component here */}
+                        <SellerAdvertiseWrapper /> 
                     </PrivateRoute>
                 )
             },

@@ -22,7 +22,7 @@ const HealthTipsSection = () => {
             <img src={tip.image} alt={tip.title} className="w-full h-40 object-cover" />
             <div className="p-4">
               <h3 className="text-lg font-semibold">{tip.title}</h3>
-              <p className="text-sm text-gray-600 mt-2">{tip.description}</p>
+              <p className="text-sm text-gray-600 mt-2 dark:text-white">{tip.description}</p>
               <button className="text-blue-600 mt-2 text-sm">Read more →</button>
             </div>
           </div>

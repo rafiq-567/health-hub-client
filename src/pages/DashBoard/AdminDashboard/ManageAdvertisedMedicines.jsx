@@ -5,14 +5,14 @@ const ManageAdvertisedMedicines = () => {
     const [medicines, setMedicines] = useState([]);
 
     useEffect(() => {
-        axios.get('https://server-mauve-seven.vercel.app/advertised-medicines')
+        axios.get('https://server-two-rosy-34.vercel.app/advertised-medicines')
             .then(res => setMedicines(res.data))
             .catch(err => console.error('Failed to load advertised medicines', err));
     }, []);
 
     const handleToggle = async (id, currentStatus) => {
         try {
-            await axios.patch(`https://server-mauve-seven.vercel.app/advertised-medicines/${id}/toggle`, {
+            await axios.patch(`https://server-two-rosy-34.vercel.app/advertised-medicines/${id}/toggle`, {
                 isActive: !currentStatus,
             });
 
@@ -29,11 +29,11 @@ const ManageAdvertisedMedicines = () => {
 console.log(medicines)
     return (
         <div className="p-4">
-            <h2 className="text-2xl font-bold mb-4">Manage Banner Advertise</h2>
-            <div className="overflow-x-auto">
+            <h2 className="text-2xl font-bold mb-4 dark:text-black">Manage Banner Advertise</h2>
+            <div className="overflow-x-auto dark:text-black">
                 <table className="table-auto w-full border">
                     <thead>
-                        <tr className="bg-gray-200">
+                        <tr className="bg-gray-200 ">
                             <th className="p-2">Image</th>
                             <th className="p-2">Name</th>
                             <th className="p-2">Description</th>

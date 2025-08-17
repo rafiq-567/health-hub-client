@@ -12,7 +12,7 @@ const SalesReport = () => {
     const [dateRange, setDateRange] = useState({ from: '', to: '' });
 
     useEffect(() => {
-        axios.get('https://server-mauve-seven.vercel.app/sales')
+        axios.get('https://server-two-rosy-34.vercel.app/sales')
             .then(res => {
                 setSalesData(res.data);
                 setFilteredData(res.data);
@@ -77,10 +77,10 @@ const SalesReport = () => {
 
     return (
         <div className="p-6 bg-white rounded-md shadow-md">
-            <h2 className="text-2xl font-semibold mb-4">Sales Report</h2>
+            <h2 className="text-2xl font-semibold mb-4 dark:text-black">Sales Report</h2>
 
             {/* Filter */}
-            <div className="flex gap-4 mb-4 items-end">
+            <div className="flex gap-4 mb-4 items-end dark:text-black">
                 <div>
                     <label className="block">From:</label>
                     <input
@@ -132,7 +132,7 @@ const SalesReport = () => {
 
             {/* Table */}
             <div className="overflow-x-auto">
-                <table className="w-full table-auto border border-gray-300 text-left">
+                <table className="w-full table-auto border border-gray-300 dark:text-black text-left">
                     <thead>
                         <tr className="bg-gray-100">
                             <th className="border px-3 py-2">Medicine</th>

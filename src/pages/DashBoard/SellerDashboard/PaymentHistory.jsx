@@ -10,7 +10,7 @@ const PaymentHistory = () => {
         queryKey: ['payments', sellerEmail],
         enabled: !!sellerEmail,
         queryFn: async () => {
-            const res = await fetch(`https://server-mauve-seven.vercel.app/payments/by-seller?email=${sellerEmail}`);
+            const res = await fetch(`https://server-two-rosy-34.vercel.app/payments/by-seller?email=${sellerEmail}`);
             return res.json();
         }
     });
@@ -18,7 +18,7 @@ const PaymentHistory = () => {
     if (isLoading) return <p>Loading payment history...</p>;
 
     return (
-        <div className="p-4 text-center">
+        <div className="p-4 text-center dark:text-black">
             <h2 className="text-xl font-bold mb-4">Payment History</h2>
             <table className="w-full border text-sm">
                 <thead className="bg-gray-100">

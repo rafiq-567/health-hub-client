@@ -80,7 +80,7 @@ const ManageCategory = () => {
   return (
     <div className="p-6">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-bold">Manage Categories</h2>
+        <h2 className="text-2xl font-bold dark:text-black">Manage Categories</h2>
         <button
           onClick={() => setShowModal(true)}
           className="btn btn-primary btn-sm"
@@ -92,14 +92,14 @@ const ManageCategory = () => {
       <div className="overflow-x-auto bg-white shadow rounded-lg">
         <table className="table w-full">
           <thead>
-            <tr>
+            <tr className="dark:text-black">
               <th>#</th>
               <th>Category Name</th>
               <th>Image</th>
               <th>Actions</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="dark:text-black">
             {categories.map((cat, idx) => (
               <tr key={cat._id}>
                 <td>{idx + 1}</td>
