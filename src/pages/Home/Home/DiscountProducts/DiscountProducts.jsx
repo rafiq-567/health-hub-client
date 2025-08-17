@@ -15,7 +15,7 @@ const DiscountProducts = () => {
   });
 
   if (isLoading) return <p className="text-center py-10">Loading...</p>;
-
+console.log(products);
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
       <h2 className="text-2xl font-bold mb-6 text-center">Discounted Medicines</h2>
